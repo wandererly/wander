@@ -1,0 +1,10 @@
+{
+  "spring-framework-version-01000": "spring-framework-upgrade",
+  "spring-boot-to-azure-spring-boot-version-01000": "spring-boot-upgrade",
+  "azure-password-01000": "plaintext-credential-to-azure-keyvault",
+  "spring-boot-to-azure-restricted-config-01000": "bare/spring-migration",
+  "auth-02000": "on-premises-user-authentication-to-microsoft-entra-id",
+  "azure-database-mysql-01000": "mi-mysql-spring",
+  "mail-00000": "javax.email-send-to-azure-communication-service-email",
+  "dockerfile-00000": "containerization-copilot-agent"
+}

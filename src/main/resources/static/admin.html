@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>管理员端 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>管理员主页</h1>
+        <p class="sub">在这里处理审批、用户与审计操作。</p>
+      </div>
+      <div class="hero-actions">
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/profile.html">个人信息</a>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>功能入口</h2>
+          <p class="muted">选择你要进入的页面</p>
+        </div>
+        <div class="grid nav-grid">
+          <a class="course-item link-card" href="/admin-role-update.html">
+            <h3>角色快速修改</h3>
+            <p class="muted">通过用户 ID 修改角色</p>
+          </a>
+          <a class="course-item link-card" href="/admin-requests.html">
+            <h3>角色变更申请</h3>
+            <p class="muted">审批用户的角色变更</p>
+          </a>
+          <a class="course-item link-card" href="/admin-users.html">
+            <h3>用户管理</h3>
+            <p class="muted">查看、搜索与管理用户</p>
+          </a>
+          <a class="course-item link-card" href="/admin-batch.html">
+            <h3>批量操作</h3>
+            <p class="muted">批量修改角色或状态</p>
+          </a>
+          <a class="course-item link-card" href="/admin-detail.html">
+            <h3>用户详情</h3>
+            <p class="muted">查看用户学习与课程情况</p>
+          </a>
+          <a class="course-item link-card" href="/admin-audit.html">
+            <h3>审计日志</h3>
+            <p class="muted">查看管理员操作记录</p>
+          </a>
+          <a class="course-item link-card" href="/admin-create-user.html">
+            <h3>创建用户</h3>
+            <p class="muted">快速创建新账号</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>

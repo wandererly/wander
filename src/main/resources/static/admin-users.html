@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>用户管理 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>用户管理</h1>
+        <p class="sub">查看、搜索并管理所有用户。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/admin.html">返回主页</a>
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>全部用户</h2>
+          <div class="inline">
+            <button id="btn-refresh-users" class="btn ghost">刷新</button>
+          </div>
+        </div>
+        <div class="inline">
+          <input id="user-keyword" type="text" placeholder="用户名或邮箱" />
+          <select id="user-role-filter">
+            <option value="">全部角色</option>
+            <option value="STUDENT">学生</option>
+            <option value="TEACHER">教师</option>
+            <option value="ADMIN">管理员</option>
+          </select>
+          <select id="user-status-filter">
+            <option value="">全部状态</option>
+            <option value="NORMAL">正常</option>
+            <option value="BANNED">禁用</option>
+          </select>
+          <button id="btn-user-search" class="btn ghost">搜索</button>
+        </div>
+        <div id="user-list" class="grid"></div>
+        <div class="inline pager">
+          <button id="btn-user-prev" class="btn ghost">上一页</button>
+          <span id="user-page-info" class="muted">1 / 1</span>
+          <button id="btn-user-next" class="btn ghost">下一页</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>

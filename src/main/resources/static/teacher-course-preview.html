@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>课程预览 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 教师端</p>
+        <h1>课程预览</h1>
+        <p class="sub">查看课程与章节展示效果。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/teacher.html">返回主页</a>
+        <a class="btn ghost" href="/teacher-my-courses.html">课程列表</a>
+        <a class="btn ghost" href="/teacher-course-manage.html">去管理</a>
+        <span id="teacher-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>选择课程预览</h2>
+          <div class="inline">
+            <button id="btn-load-courses" class="btn ghost">加载我的课程</button>
+          </div>
+        </div>
+        <label>
+          课程
+          <select id="teacher-course-select">
+            <option value="">请选择课程</option>
+          </select>
+        </label>
+        <label>
+          学生视角模式
+          <select id="preview-mode">
+            <option value="not-enrolled">未选课</option>
+            <option value="in-progress">学习中</option>
+            <option value="completed">已完成</option>
+          </select>
+        </label>
+        <p id="selected-course-info" class="muted tiny">未选择课程</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>课程信息</h2>
+          <p class="muted" id="preview-id">课程 ID: -</p>
+        </div>
+        <h3 id="preview-title">课程标题</h3>
+        <p id="preview-desc" class="muted">课程简介</p>
+        <div class="course-meta">
+          <span id="preview-status">状态</span>
+        </div>
+        <p id="preview-error" class="message"></p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>章节预览</h2>
+        </div>
+        <div id="preview-sections" class="section-list"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>学生视角（只读预览）</h2>
+          <p class="muted">展示学生端看到的课程与章节样式</p>
+        </div>
+        <div class="course-item">
+          <h3 id="student-view-title">课程标题</h3>
+          <p id="student-view-desc" class="muted">课程简介</p>
+          <div class="course-meta">
+            <span id="student-view-status">状态</span>
+            <span id="student-view-id">课程 ID: -</span>
+          </div>
+        </div>
+        <div class="inline">
+          <button id="student-view-enroll" class="btn primary" disabled>选课</button>
+          <button id="student-view-refresh" class="btn ghost" disabled>刷新进度</button>
+          <span id="student-view-enroll-status" class="muted">未选课</span>
+        </div>
+        <div id="student-view-progress" class="progress">
+          <div class="progress-ring">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle id="student-view-ring" class="ring-fg" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div id="student-view-percent" class="progress-text">0%</div>
+          </div>
+          <div>
+            <h3>学习进度（示例）</h3>
+            <p id="student-view-summary" class="summary">示例展示，不代表真实进度</p>
+          </div>
+        </div>
+        <div id="student-view-sections" class="section-list"></div>
+        <p class="muted tiny">说明：此处为展示效果，无法在教师端进行选课或打卡。</p>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/teacher.js"></script>
+  </body>
+</html>

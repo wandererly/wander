@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学生端 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 学生端</p>
+        <h1>学生主页</h1>
+        <p class="sub">在这里进入通知、课程、进度与角色申请等功能。</p>
+      </div>
+      <div class="hero-actions">
+        <span id="student-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/profile.html">个人信息</a>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>功能入口</h2>
+          <p class="muted">选择你要进入的页面</p>
+        </div>
+        <div class="grid nav-grid">
+          <a class="course-item link-card" href="/student-notifications.html">
+            <h3>通知中心</h3>
+            <p class="muted">查看系统通知与管理员消息</p>
+          </a>
+          <a class="course-item link-card" href="/student-role.html">
+            <h3>角色申请</h3>
+            <p class="muted">申请成为教师或查看审批结果</p>
+          </a>
+          <a class="course-item link-card" href="/student-courses.html">
+            <h3>课程列表</h3>
+            <p class="muted">浏览课程、筛选与搜索</p>
+          </a>
+          <a class="course-item link-card" href="/student-my-courses.html">
+            <h3>我的课程</h3>
+            <p class="muted">查看已选课程与学习进度</p>
+          </a>
+          <a class="course-item link-card" href="/student-progress.html">
+            <h3>学习进度</h3>
+            <p class="muted">选择课程后进行章节打卡</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/student.js"></script>
+  </body>
+</html>

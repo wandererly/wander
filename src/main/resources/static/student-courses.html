@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>课程列表 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 学生端</p>
+        <h1>课程列表</h1>
+        <p class="sub">浏览课程并进入详情页进行学习。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/student.html">返回主页</a>
+        <span id="student-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>课程列表</h2>
+          <div class="inline">
+            <input id="search-keyword" type="text" placeholder="搜索课程" />
+            <select id="filter-status">
+              <option value="">全部状态</option>
+              <option value="PUBLISHED">已发布</option>
+              <option value="DRAFT">草稿</option>
+              <option value="OFFLINE">已下架</option>
+            </select>
+            <button id="btn-search" class="btn ghost">搜索</button>
+          </div>
+        </div>
+        <div id="course-list" class="grid"></div>
+        <div id="course-empty" class="muted hidden">暂无课程</div>
+        <div class="inline pager">
+          <button id="btn-prev" class="btn ghost">上一页</button>
+          <span id="page-info" class="muted">1 / 1</span>
+          <button id="btn-next" class="btn ghost">下一页</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/student.js"></script>
+  </body>
+</html>

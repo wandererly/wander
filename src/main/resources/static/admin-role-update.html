@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>角色快速修改 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>角色快速修改</h1>
+        <p class="sub">通过用户 ID 直接修改角色。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/admin.html">返回主页</a>
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>修改用户角色</h2>
+        </div>
+        <label>
+          用户 ID
+          <input id="admin-user-id" type="number" placeholder="例如 1" />
+        </label>
+        <label>
+          角色
+          <select id="admin-user-role">
+            <option value="STUDENT">学生</option>
+            <option value="TEACHER">教师</option>
+            <option value="ADMIN">管理员</option>
+          </select>
+        </label>
+        <button id="btn-update-role" class="btn primary">更新角色</button>
+        <p id="admin-message" class="message"></p>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>

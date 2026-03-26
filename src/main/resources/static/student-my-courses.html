@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的课程 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 学生端</p>
+        <h1>我的课程</h1>
+        <p class="sub">查看已选课程并进入学习进度。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/student.html">返回主页</a>
+        <span id="student-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>我的课程列表</h2>
+          <div class="inline">
+            <button id="btn-refresh-my" class="btn ghost">刷新</button>
+          </div>
+        </div>
+        <div id="my-course-list" class="grid"></div>
+        <div id="my-course-empty" class="muted hidden">暂无已选课程</div>
+        <div class="inline pager">
+          <button id="btn-my-prev" class="btn ghost">上一页</button>
+          <span id="my-page-info" class="muted">1 / 1</span>
+          <button id="btn-my-next" class="btn ghost">下一页</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/student.js"></script>
+  </body>
+</html>

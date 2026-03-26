@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero single">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 学习管理系统</p>
+        <h1>学习平台</h1>
+        <p class="sub">
+          这是后端驱动的学习平台原型。先注册账号，再登录进入对应角色页面。
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="/register.html?role=STUDENT">学生注册</a>
+          <a class="btn ghost" href="/register.html?role=TEACHER">教师注册</a>
+          <a class="btn ghost" href="/login.html">已有账号登录</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="card auth-card">
+          <div class="card-head">
+            <h2>入口</h2>
+            <p class="muted">按角色进入系统</p>
+          </div>
+          <div class="grid">
+            <a class="btn ghost" href="/student.html">学生主页</a>
+            <a class="btn ghost" href="/teacher.html">教师主页</a>
+            <a class="btn ghost" href="/admin.html">管理员主页</a>
+          </div>
+          <p class="muted tiny">需要先登录才可访问功能页</p>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

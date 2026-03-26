@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "app.bootstrap.admin.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to bootstrap a default admin user at startup."
+    },
+    {
+      "name": "app.bootstrap.admin.username",
+      "type": "java.lang.String",
+      "description": "Default admin username."
+    },
+    {
+      "name": "app.bootstrap.admin.email",
+      "type": "java.lang.String",
+      "description": "Default admin email."
+    },
+    {
+      "name": "app.bootstrap.admin.password",
+      "type": "java.lang.String",
+      "description": "Default admin password."
+    }
+  ]
+}

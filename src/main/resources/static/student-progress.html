@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学习进度 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 学生端</p>
+        <h1>学习进度</h1>
+        <p class="sub">选择课程后进行章节打卡与进度查看。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/student.html">返回主页</a>
+        <span id="student-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>选择课程</h2>
+          <div class="inline">
+            <a class="btn ghost" href="/student-courses.html">去课程列表</a>
+            <a class="btn ghost" href="/student-my-courses.html">去我的课程</a>
+          </div>
+        </div>
+        <label>
+          课程 ID
+          <input id="progress-course-id" type="number" placeholder="例如 1" />
+        </label>
+        <button id="btn-load-course" class="btn ghost">加载课程</button>
+        <p id="progress-hint" class="muted tiny">可从课程列表或我的课程进入，也可以直接输入课程 ID。</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>课程详情与进度</h2>
+          <p id="course-title" class="muted">未选择课程</p>
+        </div>
+        <div id="course-meta" class="meta-card hidden">
+          <div>
+            <strong>课程简介</strong>
+            <p id="course-desc" class="muted">-</p>
+          </div>
+          <div class="meta-row">
+            <span>状态</span>
+            <span id="course-status">-</span>
+          </div>
+        </div>
+        <div id="course-actions" class="inline hidden">
+          <button id="btn-enroll" class="btn primary">选课</button>
+          <button id="btn-refresh-progress" class="btn ghost">刷新进度</button>
+        </div>
+        <div id="progress-visual" class="progress hidden">
+          <div class="progress-ring">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle id="ring-progress" class="ring-fg" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div id="progress-percent" class="progress-text">0%</div>
+          </div>
+          <div>
+            <h3>学习进度</h3>
+            <p id="progress-summary" class="summary">-</p>
+          </div>
+        </div>
+        <div id="section-list" class="section-list"></div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/student.js"></script>
+  </body>
+</html>

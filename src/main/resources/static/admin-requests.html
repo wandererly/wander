@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>角色变更申请 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>角色变更申请</h1>
+        <p class="sub">审批用户提交的角色变更申请。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/admin.html">返回主页</a>
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>审批列表</h2>
+          <div class="inline">
+            <button id="btn-refresh-requests" class="btn ghost">刷新</button>
+          </div>
+        </div>
+        <label>
+          审批备注
+          <input id="admin-note" type="text" placeholder="选填，将通知申请人" />
+        </label>
+        <div id="request-list" class="grid"></div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>

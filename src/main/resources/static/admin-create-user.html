@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>创建用户 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>创建用户</h1>
+        <p class="sub">快速创建新的用户账号。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/admin.html">返回主页</a>
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>创建用户</h2>
+        </div>
+        <label>
+          用户名
+          <input id="create-username" type="text" placeholder="username" />
+        </label>
+        <label>
+          邮箱
+          <input id="create-email" type="email" placeholder="name@qq.com" />
+        </label>
+        <label>
+          密码
+          <input id="create-password" type="password" placeholder="至少 6 位" />
+        </label>
+        <div class="inline">
+          <select id="create-role">
+            <option value="STUDENT">学生</option>
+            <option value="TEACHER">教师</option>
+            <option value="ADMIN">管理员</option>
+          </select>
+          <select id="create-status">
+            <option value="NORMAL">正常</option>
+            <option value="BANNED">禁用</option>
+          </select>
+          <button id="btn-create-user" class="btn primary">创建用户</button>
+        </div>
+        <p id="create-message" class="message"></p>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>

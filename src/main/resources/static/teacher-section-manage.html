@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>章节列表管理 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 教师端</p>
+        <h1>章节列表管理</h1>
+        <p class="sub">列表式管理章节：可直接编辑、排序与删除。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/teacher.html">返回主页</a>
+        <a class="btn ghost" href="/teacher-course-manage.html">去课程管理</a>
+        <span id="teacher-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>选择课程</h2>
+          <div class="inline">
+            <button id="btn-load-courses" class="btn ghost">加载我的课程</button>
+          </div>
+        </div>
+        <label>
+          课程
+          <select id="teacher-course-select">
+            <option value="">请选择课程</option>
+          </select>
+        </label>
+        <p id="selected-course-info" class="muted tiny">未选择课程</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>新增章节</h2>
+        </div>
+        <label>
+          章节标题
+          <input id="teacher-section-title" type="text" placeholder="例如：第 1 章 入门" />
+        </label>
+        <label>
+          顺序
+          <input id="teacher-section-order" type="number" placeholder="例如 1" />
+        </label>
+        <label>
+          内容链接
+          <input id="teacher-section-url" type="text" placeholder="https://..." />
+        </label>
+        <button id="btn-create-section" class="btn primary">新增章节</button>
+        <p id="teacher-message" class="message"></p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>章节列表</h2>
+          <div class="inline">
+            <button id="btn-refresh-sections" class="btn ghost">刷新章节</button>
+          </div>
+        </div>
+        <p class="muted tiny">提示：按住“拖拽”标签可调整顺序，松开后自动保存。</p>
+        <div id="section-list-manage" class="section-list"></div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/teacher.js"></script>
+  </body>
+</html>

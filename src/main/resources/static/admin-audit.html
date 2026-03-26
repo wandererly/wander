@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>审计日志 | 学习平台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="hero mini">
+      <div class="hero-left">
+        <p class="eyebrow">学习平台 · 管理员端</p>
+        <h1>审计日志</h1>
+        <p class="sub">查看管理员操作记录并导出。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn ghost" href="/admin.html">返回主页</a>
+        <span id="admin-user" class="muted">-</span>
+        <button id="btn-logout" class="btn ghost">退出</button>
+        <a class="btn ghost" href="/login.html">返回登录</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-head">
+          <h2>审计日志</h2>
+          <div class="inline">
+            <input id="audit-keyword" type="text" placeholder="关键词" />
+            <input id="audit-action" type="text" placeholder="动作" />
+            <input id="audit-target" type="text" placeholder="目标类型" />
+            <button id="btn-audit-search" class="btn ghost">搜索</button>
+            <button id="btn-audit-export" class="btn ghost">导出 CSV</button>
+          </div>
+        </div>
+        <div id="audit-list" class="grid"></div>
+        <div class="inline pager">
+          <button id="btn-audit-prev" class="btn ghost">上一页</button>
+          <span id="audit-page-info" class="muted">1 / 1</span>
+          <button id="btn-audit-next" class="btn ghost">下一页</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/common.js"></script>
+    <script src="/admin.js"></script>
+  </body>
+</html>
